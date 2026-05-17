@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>rannikka</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css_coffee_2.css">
+      
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+    
+<body>
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">rannikka.<span>sweetcorner</span></a>
+      
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#menu">Menu</a>
+        <a href="#kontak">Contact</a>
+      </div>
+      
+      <div class="navbar-extra">
+        <a href="#" id="search"><i data-feather="search"></i></a>
+        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+        
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search a menu...">
+        <label for="search-box"><i data-feather="search"></i></label>
+      </div>
+       
+      <div class="shopping-cart">
+         <div class="cart-item">
+           <img src="brownies.jpg" alt="brownies">
+           <div class="item-detail">
+             <h3>Brownies</h3>
+             <p class="price" data-price="55000">IDR 55K</p>
+             <div class="qty">
+               <button onclick="decrease(this)">-</button>
+               <span class="count">0</span>
+               <button onclick="increase(this)">+</button>
+             </div>
+           </div>
+         </div>
+         
+         <div class="cart-item">
+          <img src="muffin.jpg" alt="muffin">
+          <div class="item-detail">
+            <h3>Muffin</h3>
+            <p class="price" data-price="30000">IDR 30K</p>
+            <div class="qty">
+              <button onclick="decrease(this)">-</button>
+              <span class="count">0</span>
+              <button onclick="increase(this)">+</button>
+            </div>
+          </div>
+        </div>
+         
+        <div class="cart-item">
+          <img src="matilda.jpg" alt="matilda">
+          <div class="item-detail">
+            <h3>Matilda Cake</h3>
+            <p class="price" data-price="55000">IDR 55</p>
+            <div class="qty">
+              <button onclick="decrease(this)">-</button>
+              <span class="count">0</span>
+              <button onclick="increase(this)">+</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="cart-item">
+          <img src="cookies.jpg" alt="cookies">
+          <div class="item-detail">
+            <h3>Cookies</h3>
+            <p class="price" data-price="35000">IDR 35K</p>
+            <div class="qty">
+              <button onclick="decrease(this)">-</button>
+              <span class="count">0</span>
+              <button onclick="increase(this)">+</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="cart-item">
+          <img src="danish.jpg" alt="danish">
+          <div class="item-detail">
+            <h3>Danish</h3>
+            <p class="price" data-price="35000">IDR 35K</p>
+            <div class="qty">
+              <button onclick="decrease(this)">-</button>
+              <span class="count">0</span>
+              <button onclick="increase(this)">+</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="cart-item">
+          <img src="waffle.jpg" alt="waffle">
+          <div class="item-detail">
+            <h3>Waffle</h3>
+            <p class="price" data-price="38000">IDR 38K</p>
+            <div class="qty">
+              <button onclick="decrease(this)">-</button>
+              <span class="count">0</span>
+              <button onclick="increase(this)">+</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="cart-item">
+          <img src="puff.jpg" alt="puff">
+          <div class="item-detail">
+            <h3>Cream Puffs</h3>
+            <p class="price" data-price="36000">IDR 36K</p>
+            <div class="qty">
+              <button onclick="decrease(this)">-</button>
+              <span class="count">0</span>
+              <button onclick="increase(this)">+</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="cart-item">
+          <img src="pastry.jpg" alt="croissant">
+          <div class="item-detail">
+            <h3>Croissant</h3>
+            <p class="price" data-price="45000">IDR 45K</p>
+            <div class="qty">
+              <button onclick="decrease(this)">-</button>
+              <span class="count">0</span>
+              <button onclick="increase(this)">+</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="cart-item">
+          <img src="cheese.jpg" alt="cheese cake">
+          <div class="item-detail">
+            <h3>Cheese Cake</h3>
+            <p class="price" data-price="52000">IDR 52K</p>
+            <div class="qty">
+              <button onclick="decrease(this)">-</button>
+              <span class="count">0</span>
+              <button onclick="increase(this)">+</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="cart-item">
+          <img src="shortcake.jpg" alt="strawberry shortcake">
+          <div class="item-detail">
+            <h3>Strawberry Shortcake</h3>
+            <p class="price" data-price="55000">IDR 55K</p>
+            <div class="qty">
+              <button onclick="decrease(this)">-</button>
+              <span class="count">0</span>
+              <button onclick="increase(this)">+</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="cart-item">
+          <img src="macaron.jpg" alt="macaron">
+          <div class="item-detail">
+            <h3>Macaron</h3>
+            <p class="price" data-price="41000">IDR 41K</p>
+            <div class="qty">
+              <button onclick="decrease(this)">-</button>
+              <span class="count">0</span>
+              <button onclick="increase(this)">+</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="cart-item">
+          <img src="cupcake.jpg" alt="cupcake">
+          <div class="item-detail">
+            <h3>Cupcake</h3>
+            <p class="price" data-price="30000">IDR 30K</p>
+            <div class="qty">
+              <button onclick="decrease(this)">-</button>
+              <span class="count">0</span>
+              <button onclick="increase(this)">+</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="cart-item">
+          <img src="butter.jpg" alt="butterscotch">
+          <div class="item-detail">
+            <h3>Butterscotch</h3>
+            <p class="price" data-price="40000">IDR 40K</p>
+            <div class="qty">
+              <button onclick="decrease(this)">-</button>
+              <span class="count">0</span>
+              <button onclick="increase(this)">+</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="cart-item">
+          <img src="caramel.jpg" alt="caramel latte">
+          <div class="item-detail">
+            <h3>Caramel Latte</h3>
+            <p class="price" data-price="40000">IDR 40K</p>
+            <div class="qty">
+              <button onclick="decrease(this)">-</button>
+              <span class="count">0</span>
+              <button onclick="increase(this)">+</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="cart-item">
+          <img src="americano.jpg" alt="americano">
+          <div class="item-detail">
+            <h3>Americano</h3>
+            <p class="price" data-price="33000">IDR 33K</p>
+            <div class="qty">
+              <button onclick="decrease(this)">-</button>
+              <span class="count">0</span>
+              <button onclick="increase(this)">+</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="cart-item">
+          <img src="mocha.jpg" alt="mocha">
+          <div class="item-detail">
+            <h3>Mocha</h3>
+            <p class="price" data-price="38000">IDR 38K</p>
+            <div class="qty">
+              <button onclick="decrease(this)">-</button>
+              <span class="count">0</span>
+              <button onclick="increase(this)">+</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="cart-item">
+          <img src="vanilla.jpg" alt="vanilla">
+          <div class="item-detail">
+            <h3>Vanilla Latte</h3>
+            <p class="price" data-price="38000">IDR 38K</p>
+            <div class="qty">
+              <button onclick="decrease(this)">-</button>
+              <span class="count">0</span>
+              <button onclick="increase(this)">+</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="cart-item">
+          <img src="vietnam.jpg" alt="vietnam">
+          <div class="item-detail">
+            <h3>Vietnam Drip</h3>
+            <p class="price" data-price="39000">IDR 39K</p>
+            <div class="qty">
+              <button onclick="decrease(this)">-</button>
+              <span class="count">0</span>
+              <button onclick="increase(this)">+</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="cart-item">
+          <img src="chocolate.jpg" alt="iced chocolate">
+          <div class="item-detail">
+            <h3>Iced Chocolate</h3>
+            <p class="price" data-price="35000">IDR 35K</p>
+            <div class="qty">
+              <button onclick="decrease(this)">-</button>
+              <span class="count">0</span>
+              <button onclick="increase(this)">+</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="cart-item">
+          <img src="strawberry.jpg" alt="iced Strawberry">
+          <div class="item-detail">
+            <h3>Iced Strawberry</h3>
+            <p class="price" data-price="40000">IDR 40K</p>
+            <div class="qty">
+              <button onclick="decrease(this)">-</button>
+              <span class="count">0</span>
+              <button onclick="increase(this)">+</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="cart-item">
+          <img src="matcha.jpg" alt="matcha latte">
+          <div class="item-detail">
+            <h3>Matcha Latte</h3>
+            <p class="price" data-price="35000">IDR 35K</p>
+            <div class="qty">
+              <button onclick="decrease(this)">-</button>
+              <span class="count">0</span>
+              <button onclick="increase(this)">+</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="cart-item">
+          <img src="lemon.jpg" alt="lemon">
+          <div class="item-detail">
+            <h3>Lemon Tea</h3>
+            <p class="price" data-price="34000">IDR 34K</p>
+            <div class="qty">
+              <button onclick="decrease(this)">-</button>
+              <span class="count">0</span>
+              <button onclick="increase(this)">+</button>
+            </div>
+          </div>
+        </div>
+         
+        <div class="cart-item">
+          <img src="lychee.jpg" alt="lychee tea">
+          <div class="item-detail">
+            <h3>Lychee Tea</h3>
+            <p class="price" data-price="34000">IDR 34K</p>
+            <div class="qty">
+              <button onclick="decrease(this)">-</button>
+              <span class="count">0</span>
+              <button onclick="increase(this)">+</button>
+            </div>
+          </div>
+        </div>
+         
+         <div class="cart-footer">
+           <h3 class="total-harga">Total: IDR <span id="total">0</span></h3>
+           <button type="submit" class="check">Check Out</button>
+         </div>
+       </div> 
+    </nav>
+    <section class="hero" id="home">
+    <main class="content">
+      <h1>Every Cup Has a <span>Story</span></h1>
+      <p>— stay a while, take a break, have a bite.</p>
+      <a href="https://wa.me/62895639130664" class="cta">Buy Now</a>
+    </main>
+  </section>
+  <section id="about" class="about">
+    <h2><span>A Little</span> About Us</h2>
+    <div class="row">
+      <div class="about-img">
+        <img src="about_3.jpg" alt="Tentang Kami">
+      </div>
+      <div class="content"><br>
+        <h3>—  Secangkir <span class="run"> Cerita</span> <span class="rin"> dari</span><span class="ran"> Rannikka</span></h3>
+        <p>Rannikka hadir sebagai ruang tenang yang memadukan kenyamanan dengan sentuhan elegan yang pas.
+          Kami menyajikan berbagai pilihan <em>kopi, muffin, cake,</em> hingga berbagai <em>pâttiserrie</em> 
+          yang lahir dari dedikasi panjang serta penyempurnaan resep rumahan yang autentik untuk memastikan
+          kualitas terbaik di setiap sajiannya.</p>
+        <p>​Lebih dari sekadar rasa, kami percaya bahwa kebahagiaan sejati dapat ditemukan dalam detail yang sederhana.
+          With menghadirkan senyuman di setiap gigitan, kami ingin memastikan setiap kunjungan Anda di Rannikka menjadi 
+          sebuah cerita manis yang selalu menyenangkan untuk mengenang.</p>
+      </div>
+    </div>
+  </section>
+  <section id="menu" class="menu">
+    <h2>A Taste of<span> Rannikka</span></h2>
+    <p>— Setiap menu adalah hasil dari proses panjang, penyempurnaan resep rumahan yang kami jaga kualitasnya.</p><br>
+    
+    <div class="menu-categories">
+      <button class="category-btn active" onclick="filterMenu('fav')">Most Loved Treats</button>
+      <button class="category-btn" onclick="filterMenu('cake')">Cakes & Pastry</button>
+      <button class="category-btn" onclick="filterMenu('coffee')">Coffee</button>
+      <button class="category-btn" onclick="filterMenu('non-coffee')">Non-Coffee</button>
+      <button class="category-btn" onclick="filterMenu('all')">All Menu</button>
+    </div>
+    
+    <div id="no-result" style="display: none; text-align: center; margin: 2rem 0; font-size: 1.6rem; color: #ccc;">Oops! We couldn't find that sweet treat.
+    </div>
+    
+    <div class="row">
+ <div class="menu-card" data-category="cake" data-fav="true">
+        <img src="brownies.jpg" alt="brownies" class="menu-card-img">
+        <h3 class="menu-card-title">- Brownies -</h3>
+        <p class="menu-card-price">IDR 55K</p>
+      </div>
+      <div class="menu-card" data-category="cake" data-fav="true">
+        <img src="muffin.jpg" alt="muffin" class="menu-card-img">
+        <h3 class="menu-card-title">- Muffin -</h3>
+        <p class="menu-card-price">IDR 30K</p>
+      </div>
+      <div class="menu-card" data-category="cake" data-fav="true">
+        <img src="cookies.jpg" alt="cookies" class="menu-card-img">
+        <h3 class="menu-card-title">- Cookies -</h3>
+        <p class="menu-card-price">IDR 35K</p>
+      </div>
+      <div class="menu-card" data-category="cake" data-fav="true">
+        <img src="pastry.jpg" alt="croissant" class="menu-card-img">
+        <h3 class="menu-card-title">- Croissant -</h3>
+        <p class="menu-card-price">IDR 45K</p>
+      </div>
+      <div class="menu-card" data-category="coffee" data-fav="true">
+        <img src="butter.jpg" alt="butterscotch" class="menu-card-img">
+        <h3 class="menu-card-title">- Butterscotch Latte -</h3>
+        <p class="menu-card-price">IDR 40K</p>
+      </div>
+      <div class="menu-card" data-category="coffee" data-fav="true">
+        <img src="caramel.jpg" alt="caramel latte" class="menu-card-img">
+        <h3 class="menu-card-title">- Caramel Latte -</h3>
+        <p class="menu-card-price">IDR 40K</p>
+      </div>
+      <div class="menu-card" data-category="coffee" data-fav="true">
+        <img src="americano.jpg" alt="americano" class="menu-card-img">
+        <h3 class="menu-card-title">- Americano -</h3>
+        <p class="menu-card-price">IDR 33K</p>
+      </div>
+      <div class="menu-card" data-category="coffee" data-fav="true">
+        <img src="mocha.jpg" alt="mocha" class="menu-card-img">
+        <h3 class="menu-card-title">- Mocha -</h3>
+        <p class="menu-card-price">IDR 38K</p>
+      </div>
+
+      <div class="menu-card" data-category="cake" data-fav="false">
+        <img src="matilda.jpg" alt="matilda" class="menu-card-img">
+        <h3 class="menu-card-title">- Matilda Cake -</h3>
+        <p class="menu-card-price">IDR 55K</p>
+      </div>
+      <div class="menu-card" data-category="cake" data-fav="false">
+        <img src="danish.jpg" alt="danish" class="menu-card-img">
+        <h3 class="menu-card-title">- Danish -</h3>
+        <p class="menu-card-price">IDR 35K</p>
+      </div>
+      <div class="menu-card" data-category="cake" data-fav="false">
+        <img src="waffle.jpg" alt="waffle" class="menu-card-img">
+        <h3 class="menu-card-title">- Waffle -</h3>
+        <p class="menu-card-price">IDR 38K</p>
+      </div>
+      <div class="menu-card" data-category="cake" data-fav="false">
+        <img src="puff.jpg" alt="puff" class="menu-card-img">
+        <h3 class="menu-card-title">- Cream Puffs -</h3>
+        <p class="menu-card-price">IDR 36K</p>
+      </div>
+      <div class="menu-card" data-category="cake" data-fav="false">
+        <img src="cheese.jpg" alt="cheese cake" class="menu-card-img">
+        <h3 class="menu-card-title">- Cheese Cake -</h3>
+        <p class="menu-card-price">IDR 52K</p>
+      </div>
+      <div class="menu-card" data-category="cake" data-fav="false">
+        <img src="shortcake.jpg" alt="strawberry shortcake" class="menu-card-img">
+        <h3 class="menu-card-title">- Strawberry Shortcake -</h3>
+        <p class="menu-card-price">IDR 55K</p>
+      </div>
+      <div class="menu-card" data-category="cake" data-fav="false">
+        <img src="macaron.jpg" alt="macaron" class="menu-card-img">
+        <h3 class="menu-card-title">- Macaron -</h3>
+        <p class="menu-card-price">IDR 41K</p>
+      </div>
+      <div class="menu-card" data-category="cake" data-fav="false">
+        <img src="cupcake.jpg" alt="cupcake" class="menu-card-img">
+        <h3 class="menu-card-title">- Cupcake -</h3>
+        <p class="menu-card-price">IDR 30K</p>
+      </div>
+      <div class="menu-card" data-category="coffee" data-fav="false">
+        <img src="vanilla.jpg" alt="vanilla" class="menu-card-img">
+        <h3 class="menu-card-title">- Vanilla Latte -</h3>
+        <p class="menu-card-price">IDR 38K</p>
+      </div>
+      <div class="menu-card" data-category="coffee" data-fav="false">
+        <img src="vietnam.jpg" alt="vietnam" class="menu-card-img">
+        <h3 class="menu-card-title">- Vietnam Drip -</h3>
+        <p class="menu-card-price">IDR 39K</p>
+      </div>
+      <div class="menu-card" data-category="non-coffee" data-fav="false">
+        <img src="chocolate.jpg" alt="iced chocolate" class="menu-card-img">
+        <h3 class="menu-card-title">- Iced Chocolate -</h3>
+        <p class="menu-card-price">IDR 35K</p>
+      </div>
+      <div class="menu-card" data-category="non-coffee" data-fav="false">
+        <img src="strawberry.jpg" alt="iced Strawberry" class="menu-card-img">
+        <h3 class="menu-card-title">- Iced Strawberry -</h3>
+        <p class="menu-card-price">IDR 40K</p>
+      </div>
+      <div class="menu-card" data-category="non-coffee" data-fav="false">
+        <img src="matcha.jpg" alt="matcha latte" class="menu-card-img">
+        <h3 class="menu-card-title">- Matcha Latte -</h3>
+        <p class="menu-card-price">IDR 35K</p>
+      </div>
+      <div class="menu-card" data-category="non-coffee" data-fav="false">
+        <img src="lemon.jpg" alt="lemon" class="menu-card-img">
+        <h3 class="menu-card-title">- Lemon Tea -</h3>
+        <p class="menu-card-price">IDR 34K</p>
+      </div>
+      <div class="menu-card" data-category="non-coffee" data-fav="false">
+        <img src="lychee.jpg" alt="lychee tea" class="menu-card-img">
+        <h3 class="menu-card-title">- Lychee Tea -</h3>
+        <p class="menu-card-price">IDR 34K</p>
+      </div>
+    </div>
+  </section>
+  <section id="kontak" class="contact">
+    <h2><span>Reach Out</span> to Us</h2>
+    <p>— Setiap masukan, pertanyaan, atau sekadar sapaan adalah bagian dari cerita kami.
+      Isi formulir di bawah ini atau kunjungi langsung lokasi kami untuk mencicipi rasa autentik 
+      dari rannikka yang dibuat dengan sepenuh hati.</p>
+  
+    <div class="row">
+      <iframe src="https://www.google.com/maps?q=Edinburgh&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+      <p class="saran">~ Letters to Rannikka ~</p>
+      <form action="https://formspree.io/f/xykorojn" method="POST">
+        <div class="input-group">
+          <i data-feather="user"></i>
+          <input type="text" name="name" placeholder="Tell us your name..">
+        </div>
+        <div class="input-group">
+          <i data-feather="at-sign"></i>
+          <input type="email" name="email" placeholder="Leave your email here..">
+        </div>
+        <div class="input-group">
+          <i data-feather="phone-call"></i>
+          <input type="tel" name="phone" placeholder="Leave your contact here..">          
+        </div>
+        <div class="input-group">
+          <i data-feather="send"></i>
+          <input type="text" name="message" placeholder="A warm message for us..">
+        </div>
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </div>
+  </section>
+  <footer>
+    <div class="social">
+      <a href="#"><i data-feather="facebook"></i></a>
+      <a href="https://www.instagram.com/shrrannaaaa?igsh=dmo2bWVkZm96OTd5"><i data-feather="instagram"></i></a>
+    </div>
+
+    <div class="links">
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#menu">Menu</a>
+      <a href="#kontak">Contact</a>
+    </div>
+
+    <div class="credit">
+      <p>Created by <a href="">shrra</a> | © 2026.</p>
+    </div>
+  </footer>
+  <script>
+    feather.replace();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="javascript_coffee_2.js"></script>
+</body>
+</html>
