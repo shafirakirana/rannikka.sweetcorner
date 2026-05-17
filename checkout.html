@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - rannikka</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6C5141;
+            --bg: #010101;
+            --white: #D8CFBC;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg);
+            color: #fff;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background: #111;
+            padding: 2.5rem;
+            border-radius: 15px;
+            border: 1px solid #222;
+        }
+        h2 { text-align: center; color: var(--white); margin-bottom: 2rem; }
+        h3 { border-bottom: 1px solid #333; padding-bottom: 0.5rem; color: var(--white); }
+        
+        /* Ringkasan Pesanan */
+        .order-summary { margin-bottom: 2rem; }
+        .order-item { display: flex; justify-content: space-between; margin: 0.5rem 0; font-size: 1.2rem; }
+        .total-pay { font-size: 1.2rem; font-weight: 700; text-align: right; margin-top: 1rem; color: #fff; }
+        
+        /* Form */
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-size: 1.1rem; }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%; padding: 1rem; background: #222; border: 1px solid #444; 
+            color: #fff; border-radius: 8px; font-family: inherit; box-sizing: border-box;
+        }
+        .form-group textarea { height: 80px; resize: none; }
+        
+        /* Tombol */
+        .btn-submit {
+            width: 100%; padding: 1.2rem; background: var(--primary); color: #fff;
+            border: none; border-radius: 8px; font-size: 1.3rem; font-weight: 700;
+            cursor: pointer; transition: 0.3s; margin-top: 1rem;
+        }
+        .btn-submit:hover { background: #543e31; }
+        .back-link { display: block; text-align: center; margin-top: 1.5rem; color: #aaa; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Place Your Order</h2>
+    
+    <div class="order-summary">
+        <h3>Purchase Summary</h3>
+        <div id="summary-list"></div>
+        <div class="total-pay" id="summary-total">Total: IDR 0</div>
+    </div>
+
+    <form id="checkout-form" action="https://formspree.io/f/xykorojn" method="POST">
+        <h3>Detail</h3><br>
+        
+        <div class="form-group">
+            <label for="nama">Name</label>
+            <input type="text" id="nama" name="Nama Pelanggan" required placeholder="e.g. Byeon Woo Seok">
+        </div>
+        
+        <div class="form-group">
+            <label for="hp">Phone Number</label>
+            <input type="tel" id="hp" name="Nomor HP" required placeholder="+62 xxxx-xxxx-xxxx">
+        </div>
+        
+        <div class="form-group">
+            <label for="reservation-date">Reservation Date & Time</label>
+            <input type="datetime-local" id="reservation-date" required> 
+            <input type="hidden" id="reservation-date-formatted" name="Waktu Reservasi">
+        </div>
+        
+        <div class="form-group">
+            <label for="pembayaran">Payment Method</label>
+            <select id="pembayaran" name="Metode Pembayaran" required>
+                <option value="Transfer BCA">BCA Virtual Account</option>
+                <option value="Dana / OVO">QRIS (GoPay, OVO, Dana)</option>
+                <option value="Bayar di Kasir / COD">Pay at cashier</option>
+            </select>
+        </div>
+        
+        <input type="hidden" id="hidden-cart-items" name="Daftar Pesanan Menu"> 
+        <input type="hidden" id="hidden-total-pay" name="Total Pembayaran">
+        
+        <button type="submit" class="btn-submit">Complete order</button>
+    </form>
+    
+    <a href="html_coffee_2.html" class="back-link">← Back to rannikka.sweetcorner</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="checkout.js"></script>
+
+</body>
+</html>
