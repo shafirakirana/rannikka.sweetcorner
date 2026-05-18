@@ -615,7 +615,7 @@ footer .credit a {
     font-size: 2rem;
   }
 }
-/*Tablet*/
+
 /*Tablet*/
 @media (max-width: 768px) {
   html {
@@ -726,12 +726,27 @@ footer .credit a {
   html {
     font-size: 55%;
   }
-}
+
 
   .menu .row {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
+.hero .content h1 {
+  font-size: 5rem;
+  line-height: 1.1;
+}
+
+.hero .content p {
+  font-size: 1.6rem;
+}
+
+.hero .content .cta {
+  padding: 1rem 2.5rem;
+  font-size: 1.5rem;
+}
+
 .swal2-front {
     z-index: 999999 !important;
+}
 }
